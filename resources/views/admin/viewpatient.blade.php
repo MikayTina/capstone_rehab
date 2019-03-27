@@ -5,6 +5,7 @@
         @foreach($pat as $pats)
         <ol class="breadcrumb" style="height: 100px;font-size:50px;text-align: center">
           <li class="breadcrumb-item active" style=""><i class="fas fa-fw fa fa-user"></i>Patient Information</li>
+          <button class="btn btn-primary" style="margin-left: 300px;height: 60px;width: 90px;margin-top: 10px">Sessions</button><button class="btn btn-success" style="margin-left: 10px;height: 60px;width: 90px;margin-top: 10px">Graduate</button><button class="btn btn-warning" style="margin-left: 10px;height: 60px;width: 90px;margin-top: 10px">Transfer</button><button class="btn btn-danger" style="margin-left: 10px;height: 60px;width: 90px;margin-top: 10px">Dismiss</button>
         </ol> 
         
 

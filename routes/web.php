@@ -45,6 +45,16 @@ Route::group(['middleware' =>'auth'], function()
       	'as'=> 'showDeps'
     ]);
 
+    Route::get('/showCalendar', [
+      	'uses'=>'CalendarController@showCalen',
+      	'as'=> 'showCalendar'
+    ]);
+
+	 Route::get('/getEvent', ['as'=>'getEvent',
+    'uses'=>'CalendarController@get_Events'
+
+	]); 
+
 	 Route::any('/chooseuser', "UserController@chooseuser_role");
 
 	 Route::any('/createuserrole', "UserController@createuserrole");
@@ -67,9 +77,55 @@ Route::group(['middleware' =>'auth'], function()
 
 	 Route::post('/deleteuser', "UserController@deleteuser");
 
+	 Route::get('/showdep_users/{did}/{rid}', "ViewController@showdepuser");
+
 	 Route::any('/addpatient', "PatientController@addpatient");
 
 	 Route::post('/refer', "PatientController@refer");
 
+	 Route::any('/create_event', "CalendarController@create_event");
 
+	 Route::any('/add_event', "CalendarController@add_event");
+
+	 Route::get('/view_event/{id}', "CalendarController@viewevent");
+
+	 Route::any('/showpatients', "PatientController@showpatient");
+
+	 Route::get('/viewpatient/{id}', "PatientController@viewpatient");
+
+	 Route::get('/viewpatients/{id}/{pid}/{tid}', "PatientController@viewpatients");
+
+	 Route::get('/viewpatientz/{id}/{nid}', "PatientController@viewpatientz");
+
+	 Route::any('/patient_dep', "PatientController@patientdep");
+
+	 Route::get('/choosef/{id}', "PatientController@chooseform");
+
+	 Route::get('/intakeform/{id}', "PatientController@intakeform");
+
+	 Route::get('/ddeform/{id}', "PatientController@ddeform");
+
+	 Route::post('/patientsave_intake', "PatientController@save_intake");
+
+	 Route::post('/patientsave_dde', "PatientController@save_dde");
+
+	 Route::post('/deletepatient', "PatientController@flagdelete");
+
+	 Route::get('/markAsRead', "NotificationsController@markAsRead");
+
+	 Route::post('/patientTransfer', "PatientController@transferPatient");
+
+	 Route::get('/transfer_patient_now/{id}/{did}/{tid}/{pid}',"PatientController@patientTransfer");
+
+	 Route::any('/showemployees',"ViewController@showemployees");
+
+	 Route::any('/newemployee',"RegisterController@newemployee");
+
+	 Route::post('/create_employee',"RegisterController@create_employee");
+
+	 Route::post('/update_employeenow',"EmployeeController@update_employeenow");
+
+	 Route::post('/delete_employee', "EmployeeController@delete_employeenow");
+
+	 Route::any('/logs', "ViewController@showlogs");
 });

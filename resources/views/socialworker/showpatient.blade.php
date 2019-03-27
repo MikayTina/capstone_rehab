@@ -1,5 +1,14 @@
 @extends('main')
 @section('content')
+<style>
+
+  th {
+  text-align: inherit;
+  background-color: #212529;
+  color:white;
+  }
+
+</style>
  
         <!-- Breadcrumbs-->
         <ol class="breadcrumb">
@@ -11,7 +20,7 @@
 
         <!-- Icon Cards-->
         <div class="row" style="margin-left: 5px;margin-bottom: 0px">
-          <div class="col-xl-12 col-sm-9 mb-10" style="height: 6rem;">
+          <div class="col-xl-8 col-sm-9 mb-10" style="height: 6rem;">
             <div class="mb-3 text-black o-hidden h-100">
               <div class="card-body">
                   <p style="font-size: 50px;margin-top: 0px">Patients</p>
@@ -21,6 +30,13 @@
 
             </div>
           </div>
+          <div class="col-xl-4 col-sm-9 mb-10">
+            <div class="mb-3 text-black o-hidden h-100">
+              <div class="card-body">
+                  <a style="color:white" href="{{URL::to('/patient_dep')}}"><button class="btn btn-dark btn-block" style="height: 50px; width:200px;float: right;margin-top: 0px;margin-left: 0px">New Patient</button></a>
+              </div>
+          </div>
+        </div>
         </div>
          <div class="card-body" style="margin-left: 10px">
             <div class="table-responsive">

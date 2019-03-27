@@ -6,9 +6,6 @@
           <li class="breadcrumb-item">
             <a href="{{URL::to('/profile')}}">Dashboard</a>
           </li>
-          <li class="breadcrumb-item">
-            <a href="{{URL::to('/patient_dep')}}">Choose Department</a>
-          </li>
           <li class="breadcrumb-item active">Choose What to fill-up</li>
         </ol>
 

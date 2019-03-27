@@ -7,9 +7,6 @@
             <a href="{{URL::to('/profile')}}">Dashboard</a>
           </li>
           <li class="breadcrumb-item">
-            <a href="{{URL::to('/patient_dep')}}">Choose Department</a>
-          </li>
-          <li class="breadcrumb-item">
             <a href="{{URL::to('/choosef/'.$id)}}">Choose what to fill up</a>
           </li>
           <li class="breadcrumb-item active">Fill up</li>
@@ -18,7 +15,7 @@
         <!-- Icon Cards-->
     <div class="container" style="margin-top: 30px">
         <p style="font-size:50px;margin-bottom: 20px">Drug Dependency Examination Report</p>
-        <form action="{{URL::to('/patientsave')}}" method="post">
+        <form action="{{URL::to('/patientsave_dde')}}" method="post">
           {{csrf_field()}}
           <fieldset style="margin-bottom: 30px">
             <legend style="color:white;text-indent: 20px;width:1100px;margin-bottom: 40px" class="bg bg-dark">Personal Information</legend>
@@ -89,7 +86,7 @@
               <div class="col-md-3">
                 <div class="form-label-group">
                    <h6>Contact no.*</h6>
-                  <input type="text" id="contact" class="form-control" placeholder="Contact No." required="required" name="contact">
+                  <input type="tel" id="contact" class="form-control" placeholder="Contact No." required="required" name="contact">
                   <input type="hidden" name="_token" value="{{csrf_token()}}">
                   <input type="hidden" name="department" value="{{$id}}">
               </div>
@@ -133,7 +130,7 @@
               </div>
             </div>
           </div>
-        </fieldset>
+        </fieldset> 
         <fieldset>
         <legend style="color:white;text-indent: 20px;width:1100px;margin-bottom: 20px" class="bg bg-dark">General Information</legend>
         <div class="container border border-gray" style="margin-bottom: 20px;margin-top: 10px">

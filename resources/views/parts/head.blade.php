@@ -6,6 +6,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
+   @yield('style')
+
   <title>DOH - Cebu Treatment and Rehabilitation Center for Females</title>
 
   <!-- Custom fonts for this template-->
@@ -16,5 +18,11 @@
 
   <!-- Custom styles for this template-->
   <link href="{{asset('css/sb-admin.css')}}" rel="stylesheet">
+
+  <link href="{{asset('vendor/fullcalendar/fullcalendar.min.css')}}" rel="stylesheet" type="text/css">
+
+  <link href="{{asset('vendor/multi-select/css/multi-select.css')}}" rel="stylesheet" type="text/css">
+
+  <meta name="csrf-token" content="{{ csrf_token() }}">
 
 </head>  

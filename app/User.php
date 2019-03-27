@@ -2,9 +2,10 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Auth;
+use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
@@ -16,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'role', 'department',
     ];
 
     /**
@@ -27,4 +28,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function user_role()
+    {
+        return $this->belongsTo('App\User_roles', 'role');
+    }
+
+    public function user_department()
+    {
+        return $this->belongsTo('App\Departments', 'department');
+    }
 }

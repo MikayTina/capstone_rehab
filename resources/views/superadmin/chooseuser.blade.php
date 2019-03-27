@@ -7,12 +7,13 @@
           </li>
           <li class="breadcrumb-item active">User Roles</li>
         </ol>
+        <div><a style="color:white" href="{{URL::to('/createuserrole')}}"><button class="btn btn-dark btn-block" style="height: 50px; width:200px;float: right;margin-top: 0px;margin-left: 0px">New User Role</button></a></div>
 
         @include('flash::message')
 
         <!-- Icon Cards-->
         @if(Auth::user()->role == 1)
-        <div class="row" style="margin-left: 10px;margin-bottom: 50px; margin-top: 0px">
+        <div class="row" style="margin-left: 10px;margin-bottom: 50px; margin-top: 70px">
            @foreach($roles as $role)
             @if($role->id != 1)
           <div class="col-xl-4 col-sm-9 mb-10" style="height: 14rem;margin-top: 30px">
@@ -24,10 +25,9 @@
               </div>
                 <a style="color:white" href="{{URL::to('/create_user/'.$role->id)}}"><button class="btn btn-dark btn-block" style="height: 50px">Create New {{$role->name}}</button></a>
             </div>
-        </div>
+          </div>
             @endif
           @endforeach
+        </div>
         @endif
-        <a style="color:white" href="{{URL::to('/createuserrole')}}"><button class="btn btn-dark btn-block" style="height: 50px; width:200px;float: right;margin-top: 100px;margin-left: 120px">New User Role</button></a>
-      </div>
 @endsection

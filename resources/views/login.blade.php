@@ -1,37 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 
 @include('parts.head')
 
 <body class="bg-dark">
 
-  <div class="container row" style="margin-left:300px;margin-top:80px">
-     <div class="col-xl-6 col-sm-9 mb-10" style="height: 17rem;">
-            <div class="card border-dark mb-3 text-black o-hidden h-100">
-              <div class="card-body">
-                  <p style="font-size: 50px;margin-top: 50px"><i class="fas fa-fw fa fa-question"></i> TBD</p>
-                <div class="mr-5">TBD</div>
-              </div>
-              <a class="card-footer text-black clearfix small z-1" href="#">
-                <span class="float-left">View Details</span>
-                <span class="float-right">
-                  <i class="fas fa-angle-right"></i>
-                </span>
-              </a>
-            </div>
-             <div class="card border-dark text-black o-hidden h-100" style="margin-top: 25px;">
-              <div class="card-body">
-                  <p style="font-size: 50px;margin-top: 50px"><i class="fas fa-fw fa fa-question"></i> TBD</p>
-                <div class="mr-5">TBD</div>
-              </div>
-              <a class="card-footer text-black clearfix small z-1" href="#">
-                <span class="float-left">View Details</span>
-                <span class="float-right">
-                  <i class="fas fa-angle-right"></i>
-                </span>
-              </a>
-            </div>
-      </div>
+  <div class="container row" style="margin-left:550px;margin-top:80px">
        <div class="card card-login">
       <img style="height:150px;width:150px;margin-top: 30px;margin-left: 120px;" src="{{asset('images/logo2.png')}}">
       <div class="card-header" style="font-size: 20px;text-align: center">CEBU TREATMENT AND REHABILITATION CENTER FOR FEMALES</div>
